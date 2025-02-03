@@ -1,0 +1,16 @@
+/home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new
+/home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/package_run_dependencies/lidar_node_new
+/home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/parent_prefix_path/lidar_node_new
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.sh
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.dsv
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.sh
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.dsv
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.bash
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.sh
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.zsh
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.dsv
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv
+/home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/packages/lidar_node_new
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig.cmake
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig-version.cmake
+/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.xml

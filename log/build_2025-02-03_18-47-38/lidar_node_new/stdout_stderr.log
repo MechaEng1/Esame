@@ -1,0 +1,10 @@
+[35m[1mConsolidate compiler generated dependencies of target lidar_node_new[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o[0m
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:[m[K In member function ‘[01m[Kvoid ConeDetectionNode::pointCloudCallback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:387:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpublsihCloud[m[K’ was not declared in this scope; did you mean ‘[01m[KpublishCloud[m[K’?
+  387 |         [01;31m[KpublsihCloud[m[K(clusters_pub_, clusters, msg->header);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KpublishCloud[m[K
+gmake[2]: *** [CMakeFiles/lidar_node_new.dir/build.make:76: CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o] Errore 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lidar_node_new.dir/all] Errore 2
+gmake: *** [Makefile:146: all] Errore 2

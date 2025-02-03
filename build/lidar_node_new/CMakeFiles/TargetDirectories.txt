@@ -1,0 +1,10 @@
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/uninstall.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/lidar_node_new_uninstall.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/lidar_node_new.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/test.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/edit_cache.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/rebuild_cache.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/list_install_components.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/install.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/install/local.dir
+/home/diego234/Esame/build/lidar_node_new/CMakeFiles/install/strip.dir

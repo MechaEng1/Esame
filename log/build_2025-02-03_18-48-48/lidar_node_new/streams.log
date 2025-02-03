@@ -1,0 +1,16 @@
+[0.022s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[0.174s] [35m[1mConsolidate compiler generated dependencies of target lidar_node_new[0m
+[0.242s] [ 50%] [32mBuilding CXX object CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o[0m
+[13.684s] [01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:[m[K In member function ‘[01m[Kvoid ConeDetectionNode::pointCloudCallback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[13.684s] [01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:387:37:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst Ptr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&[m[K’} from expression of type ‘[01m[Kstd::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > >[m[K’
+[13.684s]   387 | rs_pub_, [01;31m[Kclusters[m[K, msg->header);
+[13.684s]       |          [01;31m[K^~~~~~~~[m[K
+[13.684s] 
+[13.684s] [01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:300:62:[m[K [01;36m[Knote: [m[Kin passing argument 2 of ‘[01m[Kvoid publishCloud(rclcpp::Publisher<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >::SharedPtr, const Ptr&, const Header&)[m[K’
+[13.684s]   300 | [01;36m[KintXYZ>::Ptr& cloud[m[K,
+[13.685s]       | [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[13.685s] 
+[20.087s] gmake[2]: *** [CMakeFiles/lidar_node_new.dir/build.make:76: CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o] Errore 1
+[20.087s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lidar_node_new.dir/all] Errore 2
+[20.087s] gmake: *** [Makefile:146: all] Errore 2
+[20.093s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5

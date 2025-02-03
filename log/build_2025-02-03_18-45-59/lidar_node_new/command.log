@@ -1,0 +1,2 @@
+Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5

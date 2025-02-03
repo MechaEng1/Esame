@@ -1,0 +1,8 @@
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:[m[K In function ‘[01m[Kvoid filterAndDividePoints(const Ptr&, pcl::PointCloud<pcl::PointXYZ>::Ptr&, pcl::PointCloud<pcl::PointXYZ>::Ptr&, pcl::PointCloud<pcl::PointXYZ>::Ptr&)[m[K’:
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:129:12:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  129 |   return [01;31m[Kcandidates[m[K;
+      |          [01;31m[K^~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/lidar_node_new.dir/build.make:76: CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o] Errore 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lidar_node_new.dir/all] Errore 2
+gmake: *** [Makefile:146: all] Errore 2

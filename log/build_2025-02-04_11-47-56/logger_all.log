@@ -1,0 +1,141 @@
+[0.153s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.153s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=5, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b145173b970>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b14516f5210>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b14516f5210>>, mixin_verb=('build',))
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.554s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/diego234/Esame'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.615s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.615s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.615s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.615s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extensions ['ignore', 'ignore_ament_install']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extension 'ignore'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extension 'ignore_ament_install'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extensions ['colcon_pkg']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extension 'colcon_pkg'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extensions ['colcon_meta']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extension 'colcon_meta'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extensions ['ros']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_node_new) by extension 'ros'
+[0.626s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_node_new' with type 'ros.ament_cmake' and name 'lidar_node_new'
+[0.626s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.626s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.626s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.626s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.626s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.676s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.679s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/diego234/Esame/install
+[0.681s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 386 installed packages in /opt/ros/humble
+[0.684s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_target' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_clean_cache' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_clean_first' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'cmake_force_configure' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'ament_cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'catkin_cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'lidar_node_new' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.777s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_node_new' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/diego234/Esame/build/lidar_node_new', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/diego234/Esame/install/lidar_node_new', 'merge_install': False, 'path': '/home/diego234/Esame/src/lidar_node_new', 'symlink_install': False, 'test_result_base': None}
+[0.777s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.779s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.781s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/diego234/Esame/src/lidar_node_new' with build type 'ament_cmake'
+[0.783s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/diego234/Esame/src/lidar_node_new'
+[0.789s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.789s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.790s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[54.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[54.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new
+[54.848s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_node_new)
+[54.856s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new' for CMake module files
+[54.860s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new' for CMake config files
+[54.861s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_node_new', 'cmake_prefix_path')
+[54.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.ps1'
+[54.867s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.dsv'
+[54.869s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new
+[54.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.sh'
+[54.879s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib'
+[54.883s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/bin'
+[54.885s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib/pkgconfig/lidar_node_new.pc'
+[54.886s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib/python3.10/site-packages'
+[54.887s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/bin'
+[54.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.ps1'
+[54.892s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv'
+[54.893s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.sh'
+[54.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.bash'
+[54.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.zsh'
+[54.902s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego234/Esame/install/lidar_node_new/share/colcon-core/packages/lidar_node_new)
+[54.906s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_node_new)
+[54.907s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new' for CMake module files
+[54.908s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new' for CMake config files
+[54.909s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_node_new', 'cmake_prefix_path')
+[54.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.ps1'
+[54.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.dsv'
+[54.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/hook/cmake_prefix_path.sh'
+[54.918s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib'
+[54.918s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/bin'
+[54.918s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib/pkgconfig/lidar_node_new.pc'
+[54.919s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/lib/python3.10/site-packages'
+[54.923s] Level 1:colcon.colcon_core.environment:checking '/home/diego234/Esame/install/lidar_node_new/bin'
+[54.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.ps1'
+[54.924s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv'
+[54.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.sh'
+[54.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.bash'
+[54.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.zsh'
+[54.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego234/Esame/install/lidar_node_new/share/colcon-core/packages/lidar_node_new)
+[54.934s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[54.934s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[54.934s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[54.934s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[54.945s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[54.945s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[54.945s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[55.023s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[55.025s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego234/Esame/install/local_setup.ps1'
+[55.029s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego234/Esame/install/_local_setup_util_ps1.py'
+[55.036s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego234/Esame/install/setup.ps1'
+[55.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego234/Esame/install/local_setup.sh'
+[55.041s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego234/Esame/install/_local_setup_util_sh.py'
+[55.042s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego234/Esame/install/setup.sh'
+[55.045s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego234/Esame/install/local_setup.bash'
+[55.046s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego234/Esame/install/setup.bash'
+[55.053s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego234/Esame/install/local_setup.zsh'
+[55.054s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego234/Esame/install/setup.zsh'

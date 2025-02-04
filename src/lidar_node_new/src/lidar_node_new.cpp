@@ -20,24 +20,24 @@
 #define GROUND_LIMIT -0.65
 #define AIR_LIMIT -0.2
 
-#define CLUSTER_DISTANCE 0.2
+#define CLUSTER_DISTANCE 0.1      //
 #define MIN_CLUSTER_SIZE 3
-#define MAX_CLUSTER_SIZE 80
+#define MAX_CLUSTER_SIZE 30
 
 // Se desideri filtrare in base all'angolo in avanti, imposta opportunamente questi valori
-#define FOV_FRONT_ANGLE_MIN -45.0  
-#define FOV_FRONT_ANGLE_MAX 45.0
+#define FOV_FRONT_ANGLE_MIN -100.0  
+#define FOV_FRONT_ANGLE_MAX 100.0
 
 // Dimensioni coni (modifica i valori in base alla reale geometria dei coni)
 const float MAX_CONE_WIDTH = 0.5;   
-const float MIN_CONE_WIDTH = 0.25;  
-const float MIN_CONE_HEIGHT = 0.15; 
-const float MAX_CONE_HEIGHT = 0.35; 
+const float MIN_CONE_WIDTH = 0.05;  
+const float MIN_CONE_HEIGHT = 0.10; 
+const float MAX_CONE_HEIGHT = 0.50; 
 
 // Parametri LiDAR e coni per il calcolo dei punti attesi
 const float LIDAR_VERTICAL_RES = 2.0 * M_PI / 180;    // 2° in radianti
 const float LIDAR_HORIZONTAL_RES = 0.1 * M_PI / 180;    // 0.1° in radianti
-const float CONE_WIDTH = 0.2;    // 20 cm (diametro base cono)
+const float CONE_WIDTH = 0.1;    // 20 cm (diametro base cono)
 const float CONE_HEIGHT = 0.3;   // 30 cm (altezza cono)
 
 //------------------ FUNZIONI UTILI ---------------------
@@ -55,6 +55,8 @@ float calculateExpectedPoints(const Eigen::Vector4f& centroid) {
 // - Solo punti con y compreso tra min_y e max_y (limiti laterali della carreggiata)
 pcl::PointCloud<pcl::PointXYZ>::Ptr filterRoadArea(
     const pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud,
+    const std_msgs::msg::Header& header,
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_road_pub_,
     float max_distance,   // Distanza massima in avanti (asse x)
     float min_y,          // Limite sinistro della carreggiata (asse y)
     float max_y           // Limite destro della carreggiata (asse y)
@@ -71,12 +73,22 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr filterRoadArea(
     pass.setFilterFieldName("y");
     pass.setFilterLimits(min_y, max_y);
     pass.filter(*cloud_filtered_road);
+
+    RCLCPP_INFO(rclcpp::get_logger("filterRoadArea"), "Dopo filtro Y: %zu punti", cloud_filtered_road->size());
     
-    return cloud_filtered_road;
+    sensor_msgs::msg::PointCloud2 output_msg;           // Pubblica la nuvola di punti filtrata
+    pcl::toROSMsg(*cloud_filtered_road, output_msg);    // in un topic apposito
+    output_msg.header = header;                    // per il debug tramite RViz
+    filtered_road_pub_->publish(output_msg);            
+
+    return cloud_filtered_road;                         // Ritorna la nuvola filtrata
 }
 
 // Filtra i punti in base al Field Of View (FOV) frontale del LiDAR
-pcl::PointCloud<pcl::PointXYZ>::Ptr filterFrontFOV(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud_filtered_road) {
+pcl::PointCloud<pcl::PointXYZ>::Ptr filterFrontFOV(
+    const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud_filtered_road,
+    const std_msgs::msg::Header& header,
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_fov_pub_) {
     auto filtered_cloud = pcl::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
     for (const auto& point : cloud_filtered_road->points) {
         float theta = atan2(point.y, point.x) * 180.0 / M_PI; // Angolo in gradi
@@ -84,9 +96,19 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr filterFrontFOV(const pcl::PointCloud<pcl::Po
             filtered_cloud->points.push_back(point);
         }
     }
+
+    RCLCPP_INFO(rclcpp::get_logger("filterFrontFOV"), "Dopo filtro FOV: %zu punti", filtered_cloud->size());
+
     filtered_cloud->width = filtered_cloud->points.size();
     filtered_cloud->height = 1;
     filtered_cloud->is_dense = true;
+
+
+    sensor_msgs::msg::PointCloud2 output_msg;           // Pubblica la nuvola di punti filtrata
+    pcl::toROSMsg(*filtered_cloud, output_msg);         // in un topic apposito
+    output_msg.header = header;                    // per il debug tramite RViz
+    filtered_fov_pub_->publish(output_msg);
+
     return filtered_cloud;
 }
 
@@ -202,10 +224,10 @@ std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> clusterPoints(
         }
     }
     
-    sensor_msgs::msg::PointCloud2 output_msg;
-    pcl::toROSMsg(*colored_clusters, output_msg);
-    output_msg.header = header;
-    clusters_pub->publish(output_msg);
+    sensor_msgs::msg::PointCloud2 output_msg;           // Pubblica i cluster colorati
+    pcl::toROSMsg(*colored_clusters, output_msg);       // in un topic apposito
+    output_msg.header = header;                         // per il debug
+    clusters_pub->publish(output_msg);                  // tramite RViz
 
     return clusters;
 }
@@ -259,7 +281,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr detectCones(
     for (const auto& cluster : clusters) {
         Eigen::Vector4f centroid = computeClusterCentroid(cluster);
         float expected_points = calculateExpectedPoints(centroid);
-        float tolerance = 1.0 * expected_points;  // Tolleranza ±
+        float tolerance = 0.95 * expected_points;  // Tolleranza ±
 
         BoundingBox box = computeBoundingBox(cluster);
         bool valid_size =   (box.size.x() >= MIN_CONE_WIDTH && box.size.x() <= MAX_CONE_WIDTH) &&
@@ -312,13 +334,15 @@ public:
             std::bind(&ConeDetectionNode::pointCloudCallback, this, std::placeholders::_1));
 
         // Publisher per le varie nuvole di punti e per le posizioni dei coni
-        ground_pub_            = this->create_publisher<sensor_msgs::msg::PointCloud2>("/ground_points", 10); 
-        air_pub_               = this->create_publisher<sensor_msgs::msg::PointCloud2>("/air_points", 10);
-        candidates_pub_        = this->create_publisher<sensor_msgs::msg::PointCloud2>("/candidate_points", 10);
-        cones_pub_             = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cones", 10);
-        cones_positions_pub_   = this->create_publisher<geometry_msgs::msg::PoseArray>("/cone_positions", 10);
-        filtered_fov_pub_      = this->create_publisher<sensor_msgs::msg::PointCloud2>("/filtered_fov", 10);
-        clusters_pub_          = this->create_publisher<sensor_msgs::msg::PointCloud2>("/colored_clusters", 10);
+        ground_pub_             = this->create_publisher<sensor_msgs::msg::PointCloud2>("/ground_points", 10); 
+        air_pub_                = this->create_publisher<sensor_msgs::msg::PointCloud2>("/air_points", 10);
+        candidates_pub_         = this->create_publisher<sensor_msgs::msg::PointCloud2>("/candidate_points", 10);
+        cones_pub_              = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cones", 10);
+        cones_positions_pub_    = this->create_publisher<geometry_msgs::msg::PoseArray>("/cone_positions", 10);
+        filtered_fov_pub_       = this->create_publisher<sensor_msgs::msg::PointCloud2>("/filtered_fov", 10);
+        clusters_pub_           = this->create_publisher<sensor_msgs::msg::PointCloud2>("/colored_clusters", 10);
+        filtered_road_pub_      = this->create_publisher<sensor_msgs::msg::PointCloud2>("/filtered_road", 10);
+
     }
 
 private:
@@ -330,6 +354,8 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr cones_positions_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_fov_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr clusters_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_road_pub_;
+
 
     // Callback principale: conversione, filtraggio, clustering e rilevazione dei coni
     void pointCloudCallback(const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
@@ -341,12 +367,12 @@ private:
         // - Solo punti con x compreso tra 0 e 50 metri
         // - Solo punti con y compreso tra -3 e 3 metri
         float max_distance = 50.0;
-        float min_y = -3.0;
-        float max_y = 3.0;
-        auto road_cloud = filterRoadArea(cloud, max_distance, min_y, max_y);
+        float min_y = -2.0;
+        float max_y = 2.0;
+        auto road_cloud = filterRoadArea(cloud, msg->header, filtered_road_pub_, max_distance, min_y, max_y);
         
         // Applica il filtro FOV (qui rimane invariato, ma puoi modificarlo se necessario)
-        auto fov_filtered_cloud = filterFrontFOV(road_cloud);
+        auto fov_filtered_cloud = filterFrontFOV(road_cloud, msg->header, filtered_fov_pub_);
         
         // Suddivide la nuvola in base all'altezza (asse z)
         pcl::PointCloud<pcl::PointXYZ>::Ptr ground(new pcl::PointCloud<pcl::PointXYZ>());
@@ -366,6 +392,8 @@ private:
         publishCloud(candidates_pub_, candidates, msg->header);
         publishCloud(cones_pub_, cones, msg->header);
         publishCloud(filtered_fov_pub_, fov_filtered_cloud, msg->header);
+        publishCloud(filtered_road_pub_, road_cloud, msg->header);
+
     }
 };
 

@@ -13,6 +13,7 @@
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/conversions.h>
 #include <Eigen/Dense>
+#include <pcl/features/moment_of_inertia_estimation.h>
 #include <vector>
 #include <cmath>
 
@@ -20,31 +21,35 @@
 #define GROUND_LIMIT -0.65
 #define AIR_LIMIT -0.2
 
-#define CLUSTER_DISTANCE 0.1      //
-#define MIN_CLUSTER_SIZE 3
-#define MAX_CLUSTER_SIZE 30
+#define CLUSTER_DISTANCE 0.08      
+#define MIN_CLUSTER_SIZE 2
+#define MAX_CLUSTER_SIZE 80
 
 // Se desideri filtrare in base all'angolo in avanti, imposta opportunamente questi valori
 #define FOV_FRONT_ANGLE_MIN -100.0  
 #define FOV_FRONT_ANGLE_MAX 100.0
 
 // Dimensioni coni (modifica i valori in base alla reale geometria dei coni)
-const float MAX_CONE_WIDTH = 0.5;   
-const float MIN_CONE_WIDTH = 0.05;  
-const float MIN_CONE_HEIGHT = 0.10; 
-const float MAX_CONE_HEIGHT = 0.50; 
+const float MIN_CONE_WIDTH = 0.05;
+const float MAX_CONE_WIDTH = 0.25;
+const float MIN_CONE_HEIGHT = 0.1;
+const float MAX_CONE_HEIGHT = 0.35;
+
+/* const float TOLERANCE_WIDTH = 0.05;
+const float TOLERANCE_HEIGHT = 0.05; */
+
 
 // Parametri LiDAR e coni per il calcolo dei punti attesi
 const float LIDAR_VERTICAL_RES = 2.0 * M_PI / 180;    // 2° in radianti
 const float LIDAR_HORIZONTAL_RES = 0.1 * M_PI / 180;    // 0.1° in radianti
-const float CONE_WIDTH = 0.1;    // 20 cm (diametro base cono)
-const float CONE_HEIGHT = 0.3;   // 30 cm (altezza cono)
+const float CONE_WIDTH = 0.15;    // 20 cm (diametro base cono)
+const float CONE_HEIGHT = 0.25;  // 30 cm (altezza cono)
 
 //------------------ FUNZIONI UTILI ---------------------
 
 // Calcola i punti attesi in base alla distanza del centroide
 float calculateExpectedPoints(const Eigen::Vector4f& centroid) {
-    float d = centroid.norm();  // Distanza euclidea
+    float d = centroid.norm();  //Distanza euclidea
     float Ev = (CONE_HEIGHT) / (2 * d * tan(LIDAR_VERTICAL_RES / 2));
     float Eh = (CONE_WIDTH) / (2 * d * tan(LIDAR_HORIZONTAL_RES / 2));
     return 0.5 * Ev * Eh;  // Fattore 1/2 come nella formula
@@ -239,17 +244,25 @@ struct BoundingBox {
     Eigen::Vector3f size;
 };
 
-BoundingBox computeBoundingBox(pcl::PointCloud<pcl::PointXYZ>::Ptr cluster) {
-    Eigen::Vector4f min_pt, max_pt;
-    pcl::getMinMax3D(*cluster, min_pt, max_pt);
+BoundingBox computeOrientedBoundingBox(pcl::PointCloud<pcl::PointXYZ>::Ptr cluster) {
+    pcl::MomentOfInertiaEstimation<pcl::PointXYZ> feature_extractor;
+    feature_extractor.setInputCloud(cluster);
+    feature_extractor.compute();
+
+    pcl::PointXYZ min_point_OBB, max_point_OBB, position_OBB;
+    Eigen::Matrix3f rotational_matrix_OBB;
+    feature_extractor.getOBB(min_point_OBB, max_point_OBB, position_OBB, rotational_matrix_OBB);
 
     BoundingBox box;
-    box.min_point = min_pt.head<3>();
-    box.max_point = max_pt.head<3>();
-    box.size = box.max_point - box.min_point;
-
+    // La dimensione dell'OBB è data dalla differenza tra i punti minimi e massimi nell'OBB
+    box.size = Eigen::Vector3f(max_point_OBB.x - min_point_OBB.x,
+                                 max_point_OBB.y - min_point_OBB.y,
+                                 max_point_OBB.z - min_point_OBB.z);
+    // Se vuoi avere anche i punti in frame globale, potresti calcolarli
+    // Oppure usare position_OBB per definire il centro dell'OBB.
     return box;
 }
+
 
 // Calcola il centroide di un cluster
 Eigen::Vector4f computeClusterCentroid(pcl::PointCloud<pcl::PointXYZ>::Ptr cluster) {
@@ -283,23 +296,24 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr detectCones(
         float expected_points = calculateExpectedPoints(centroid);
         float tolerance = 0.95 * expected_points;  // Tolleranza ±
 
-        BoundingBox box = computeBoundingBox(cluster);
-        bool valid_size =   (box.size.x() >= MIN_CONE_WIDTH && box.size.x() <= MAX_CONE_WIDTH) &&
-                            (box.size.y() >= MIN_CONE_WIDTH && box.size.y() <= MAX_CONE_WIDTH) && 
-                            (box.size.z() >= MIN_CONE_HEIGHT && box.size.z() <= MAX_CONE_HEIGHT);
+        BoundingBox box = computeOrientedBoundingBox(cluster);
+        bool valid_size =   (box.size.x() >= MIN_CONE_WIDTH && box.size.x()<= MAX_CONE_WIDTH ) &&
+                            (box.size.y() >= MIN_CONE_WIDTH && box.size.y()<= MAX_CONE_WIDTH ) &&
+                            (box.size.z() >= MIN_CONE_HEIGHT && box.size.z()<= MAX_CONE_HEIGHT);
+
         
-        bool valid_points = (cluster->points.size() >= (expected_points - tolerance)) && 
+        bool valid_points = (cluster->points.size() >= (expected_points - tolerance)) &&
                             (cluster->points.size() <= (expected_points + tolerance));
 
-        if (valid_size && valid_points) {
-            cones->points.insert(cones->points.end(), cluster->points.begin(), cluster->points.end());
+        //if (valid_points) {
+            cones->points.insert(cones->points.end(), cluster->points.begin(), cluster->points.end());      
 
             geometry_msgs::msg::Pose pose;
             pose.position.x = centroid[0];
             pose.position.y = centroid[1];
             pose.position.z = centroid[2];
             cone_positions.poses.push_back(pose);
-        }
+        //}
     }
     
     cones_positions_pub->publish(cone_positions);
@@ -366,7 +380,7 @@ private:
         // Applica il filtro per limitare la nuvola all'area della carreggiata:
         // - Solo punti con x compreso tra 0 e 50 metri
         // - Solo punti con y compreso tra -3 e 3 metri
-        float max_distance = 50.0;
+        float max_distance = 8.0;
         float min_y = -2.0;
         float max_y = 2.0;
         auto road_cloud = filterRoadArea(cloud, msg->header, filtered_road_pub_, max_distance, min_y, max_y);

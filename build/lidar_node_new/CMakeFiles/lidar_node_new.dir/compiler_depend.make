@@ -2253,7 +2253,8 @@ CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o: /home/diego234/Esame/src
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
-  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /usr/include/pcl-1.12/pcl/features/moment_of_inertia_estimation.h
 
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h:
@@ -6067,6 +6068,8 @@ CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o: /home/diego234/Esame/src
 /usr/include/eigen3/Eigen/src/Geometry/Hyperplane.h:
 
 /usr/include/boost/preprocessor/tuple/elem.hpp:
+
+/usr/include/pcl-1.12/pcl/features/moment_of_inertia_estimation.h:
 
 /usr/include/boost/mpl/O1_size_fwd.hpp:
 

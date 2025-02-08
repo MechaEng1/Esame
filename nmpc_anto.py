@@ -47,12 +47,14 @@ class NMPC_APF(Node):
         self.path_history = {'x': [], 'y': []}
         
         self.timer = self.create_timer(self.dt, self.control_loop)
-
+    
+    
+    # Visualization methods
     def setup_visualization(self):
         """Initialize the matplotlib visualization"""
         plt.ion()  # Enable interactive mode
         self.fig, self.ax = plt.subplots(figsize=(10, 8))
-        self.ax.set_xlim(-5, 60)
+        self.ax.set_xlim(-5, 60) 
         self.ax.set_ylim(-15, 15)
         self.ax.set_aspect('equal')
         self.ax.grid(True)

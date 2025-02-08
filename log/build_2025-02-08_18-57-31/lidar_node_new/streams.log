@@ -1,0 +1,26 @@
+[0.107s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[0.304s] [35m[1mConsolidate compiler generated dependencies of target lidar_node_new[0m
+[0.391s] [ 50%] [32mBuilding CXX object CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o[0m
+[30.602s] [100%] [32m[1mLinking CXX executable lidar_node_new[0m
+[42.991s] [100%] Built target lidar_node_new
+[43.019s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[43.041s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new
+[43.053s] -- Install configuration: ""
+[43.053s] -- Installing: /home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new
+[43.060s] -- Set runtime path of "/home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new" to ""
+[43.060s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/package_run_dependencies/lidar_node_new
+[43.060s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/parent_prefix_path/lidar_node_new
+[43.060s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.sh
+[43.060s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.dsv
+[43.060s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.sh
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.dsv
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.bash
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.sh
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.zsh
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.dsv
+[43.061s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/packages/lidar_node_new
+[43.061s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig.cmake
+[43.062s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig-version.cmake
+[43.062s] -- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.xml
+[43.068s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new

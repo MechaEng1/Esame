@@ -2255,4 +2255,5 @@ CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+ /usr/include/pcl-1.12/pcl/features/moment_of_inertia_estimation.h
 

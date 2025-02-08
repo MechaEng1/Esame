@@ -1,0 +1,7 @@
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:[m[K In function ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr detectCones(const std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > >&, const Header&, rclcpp::Publisher<geometry_msgs::msg::PoseArray_<std::allocator<void> > >::SharedPtr)[m[K’:
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:300:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalid_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  300 |         bool [01;35m[Kvalid_size[m[K =   (box.size.x() >= MIN_CONE_WIDTH && box.size.x()<= MAX_CONE_WIDTH ) &&
+      |              [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:305:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalid_points[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  305 |         bool [01;35m[Kvalid_points[m[K = (cluster->points.size() >= (expected_points - tolerance)) &&
+      |              [01;35m[K^~~~~~~~~~~~[m[K

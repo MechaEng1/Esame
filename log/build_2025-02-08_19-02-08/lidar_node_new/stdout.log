@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target lidar_node_new[0m
+[100%] Built target lidar_node_new
+-- Install configuration: ""
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/package_run_dependencies/lidar_node_new
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/parent_prefix_path/lidar_node_new
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.sh
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.sh
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.dsv
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.bash
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.sh
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.zsh
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.dsv
+-- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/packages/lidar_node_new
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig.cmake
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig-version.cmake
+-- Up-to-date: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.xml

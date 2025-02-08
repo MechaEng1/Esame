@@ -1,0 +1,120 @@
+[0.041s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/diego234/Esame/src/lidar_node_new -DCMAKE_INSTALL_PREFIX=/home/diego234/Esame/install/lidar_node_new
+[0.339s] -- The C compiler identification is GNU 11.4.0
+[0.573s] -- The CXX compiler identification is GNU 11.4.0
+[0.633s] -- Detecting C compiler ABI info
+[0.908s] -- Detecting C compiler ABI info - done
+[0.928s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.932s] -- Detecting C compile features
+[0.934s] -- Detecting C compile features - done
+[0.959s] -- Detecting CXX compiler ABI info
+[1.327s] -- Detecting CXX compiler ABI info - done
+[1.348s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.350s] -- Detecting CXX compile features
+[1.351s] -- Detecting CXX compile features - done
+[1.366s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.119s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.595s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[2.814s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.845s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.902s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.960s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.053s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.304s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.323s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[3.486s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.558s] -- Looking for pthread.h
+[3.948s] -- Looking for pthread.h - found
+[3.960s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.286s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.288s] -- Found Threads: TRUE  
+[4.550s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.713s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[4.877s] -- Checking for module 'eigen3'
+[4.936s] --   Found eigen3, version 3.4.0
+[5.031s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[5.033s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[5.211s] -- Checking for module 'flann'
+[5.272s] --   Found flann, version 1.9.1
+[5.543s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[5.545s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[9.129s] -- Checking for module 'libusb-1.0'
+[9.180s] --   Found libusb-1.0, version 1.0.25
+[9.313s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[9.323s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[9.558s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[9.919s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[9.935s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[9.949s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[10.349s] -- Found Qhull version 8.0.2
+[10.747s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[11.108s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[11.113s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[11.116s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[11.119s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[11.126s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[11.128s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[11.130s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[11.131s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[11.134s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[11.137s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[11.143s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[11.146s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[11.149s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[11.152s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[11.156s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[11.161s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[11.162s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[11.164s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[11.169s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[11.169s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[11.170s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[11.173s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[11.173s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[11.174s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[11.177s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[11.188s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[11.280s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[11.283s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[11.283s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[11.560s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[11.780s] -- Found OpenCV: /usr (found version "4.5.4") 
+[11.818s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[11.818s] -- Configured cppcheck include dirs: 
+[11.818s] -- Configured cppcheck exclude dirs and/or files: 
+[11.818s] -- Added test 'lint_cmake' to check CMake code style
+[11.827s] -- Added test 'uncrustify' to check C / C++ code style
+[11.827s] -- Configured uncrustify additional arguments: 
+[11.830s] -- Added test 'xmllint' to check XML markup files
+[11.841s] -- Configuring done
+[11.977s] -- Generating done
+[12.008s] -- Build files have been written to: /home/diego234/Esame/build/lidar_node_new
+[12.080s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/diego234/Esame/src/lidar_node_new -DCMAKE_INSTALL_PREFIX=/home/diego234/Esame/install/lidar_node_new
+[12.088s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[12.248s] [ 50%] [32mBuilding CXX object CMakeFiles/lidar_node_new.dir/src/lidar_node_new.cpp.o[0m
+[26.485s] [01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:[m[K In function ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr detectCones(const std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > >&, const Header&, rclcpp::Publisher<geometry_msgs::msg::PoseArray_<std::allocator<void> > >::SharedPtr)[m[K’:
+[26.485s] [01m[K/home/diego234/Esame/src/lidar_node_new/src/lidar_node_new.cpp:305:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalid_points[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[26.485s]   305 |         bool [01;35m[Kvalid_points[m[K = (cluster->points.size() >= (expected_points - tolerance)) &&
+[26.485s]       |              [01;35m[K^~~~~~~~~~~~[m[K
+[41.748s] [100%] [32m[1mLinking CXX executable lidar_node_new[0m
+[53.702s] [100%] Built target lidar_node_new
+[53.722s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
+[53.741s] Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new
+[53.759s] -- Install configuration: ""
+[53.759s] -- Installing: /home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new
+[53.759s] -- Set runtime path of "/home/diego234/Esame/install/lidar_node_new/lib/lidar_node_new/lidar_node_new" to ""
+[53.759s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/package_run_dependencies/lidar_node_new
+[53.759s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/parent_prefix_path/lidar_node_new
+[53.763s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.sh
+[53.764s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/ament_prefix_path.dsv
+[53.764s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.sh
+[53.764s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/environment/path.dsv
+[53.765s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.bash
+[53.765s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.sh
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.zsh
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/local_setup.dsv
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.dsv
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/ament_index/resource_index/packages/lidar_node_new
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig.cmake
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/cmake/lidar_node_newConfig-version.cmake
+[53.766s] -- Installing: /home/diego234/Esame/install/lidar_node_new/share/lidar_node_new/package.xml
+[53.771s] Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new

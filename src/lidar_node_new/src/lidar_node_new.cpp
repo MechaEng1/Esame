@@ -21,9 +21,9 @@
 #define GROUND_LIMIT -0.65
 #define AIR_LIMIT -0.2
 
-#define CLUSTER_DISTANCE 0.08      
+#define CLUSTER_DISTANCE 0.05      
 #define MIN_CLUSTER_SIZE 2
-#define MAX_CLUSTER_SIZE 80
+#define MAX_CLUSTER_SIZE 30
 
 // Se desideri filtrare in base all'angolo in avanti, imposta opportunamente questi valori
 #define FOV_FRONT_ANGLE_MIN -100.0  
@@ -294,7 +294,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr detectCones(
     for (const auto& cluster : clusters) {
         Eigen::Vector4f centroid = computeClusterCentroid(cluster);
         float expected_points = calculateExpectedPoints(centroid);
-        float tolerance = 0.95 * expected_points;  // Tolleranza ±
+        float tolerance = 0.75 * expected_points;  // Tolleranza ±
 
         BoundingBox box = computeOrientedBoundingBox(cluster);
         bool valid_size =   (box.size.x() >= MIN_CONE_WIDTH && box.size.x()<= MAX_CONE_WIDTH ) &&

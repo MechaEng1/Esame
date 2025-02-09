@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>nmpc_apf_pkg</name>
+  <version>0.0.1</version>
+  <description>ROS2 package for NMPC and APF-based robot control</description>
+  <maintainer email="tuo@email.com">Tuo Nome</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Dipendenze di base ROS2 -->
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+
+  <!-- Dipendenze Python -->
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <exec_depend>python3-casadi</exec_depend>
+  <exec_depend>python3-do-mpc</exec_depend>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

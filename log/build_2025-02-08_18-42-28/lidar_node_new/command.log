@@ -1,6 +1,0 @@
-Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/diego234/Esame/src/lidar_node_new -DCMAKE_INSTALL_PREFIX=/home/diego234/Esame/install/lidar_node_new
-Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/diego234/Esame/src/lidar_node_new -DCMAKE_INSTALL_PREFIX=/home/diego234/Esame/install/lidar_node_new
-Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
-Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/diego234/Esame/build/lidar_node_new -- -j5 -l5
-Invoking command in '/home/diego234/Esame/build/lidar_node_new': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new
-Invoked command in '/home/diego234/Esame/build/lidar_node_new' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/diego234/Esame/build/lidar_node_new

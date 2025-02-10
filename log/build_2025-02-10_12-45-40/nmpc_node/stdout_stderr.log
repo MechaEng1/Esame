@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/nmpc_node/nmpc_node.egg-info
+writing ../../build/nmpc_node/nmpc_node.egg-info/PKG-INFO
+writing dependency_links to ../../build/nmpc_node/nmpc_node.egg-info/dependency_links.txt
+writing entry points to ../../build/nmpc_node/nmpc_node.egg-info/entry_points.txt
+writing requirements to ../../build/nmpc_node/nmpc_node.egg-info/requires.txt
+writing top-level names to ../../build/nmpc_node/nmpc_node.egg-info/top_level.txt
+writing manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+reading manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+writing manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/diego234/Esame/build/nmpc_node/build
+creating /home/diego234/Esame/build/nmpc_node/build/lib
+creating /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+copying nmpc_node/nmpc_anto.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+copying nmpc_node/nmpc_diego.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+copying nmpc_node/__init__.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+running install
+running install_lib
+creating /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/nmpc_anto.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/nmpc_diego.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/__init__.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/nmpc_anto.py to nmpc_anto.cpython-310.pyc
+byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/nmpc_diego.py to nmpc_diego.cpython-310.pyc
+byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/diego234/Esame/install/nmpc_node/share/ament_index
+creating /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index
+creating /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index/packages
+copying resource/nmpc_node -> /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index/packages
+copying package.xml -> /home/diego234/Esame/install/nmpc_node/share/nmpc_node
+running install_egg_info
+Copying ../../build/nmpc_node/nmpc_node.egg-info to /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node-0.0.0-py3.10.egg-info
+running install_scripts
+Installing nmpc_node script to /home/diego234/Esame/install/nmpc_node/lib/nmpc_node
+writing list of installed files to '/home/diego234/Esame/build/nmpc_node/install.log'

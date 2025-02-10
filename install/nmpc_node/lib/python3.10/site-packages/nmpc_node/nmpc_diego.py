@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 class NMPCObstacleAvoidance(Node):
     def __init__(self):
-        super().__init__("nmpc_node")
+        super().__init__("nmpc_obstacle_avoidance")
 
         self.subscription = self.create_subscription(
             PoseArray, "/cone_positions", self.cone_callback, 10)

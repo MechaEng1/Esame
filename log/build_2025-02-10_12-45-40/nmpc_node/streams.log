@@ -1,0 +1,40 @@
+[2.433s] Invoking command in '/home/diego234/Esame/src/nmpc_node': PYTHONPATH=/home/diego234/Esame/build/nmpc_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmpc_node build --build-base /home/diego234/Esame/build/nmpc_node/build install --record /home/diego234/Esame/build/nmpc_node/install.log --single-version-externally-managed install_data
+[2.841s] running egg_info
+[2.842s] creating ../../build/nmpc_node/nmpc_node.egg-info
+[2.842s] writing ../../build/nmpc_node/nmpc_node.egg-info/PKG-INFO
+[2.842s] writing dependency_links to ../../build/nmpc_node/nmpc_node.egg-info/dependency_links.txt
+[2.842s] writing entry points to ../../build/nmpc_node/nmpc_node.egg-info/entry_points.txt
+[2.842s] writing requirements to ../../build/nmpc_node/nmpc_node.egg-info/requires.txt
+[2.843s] writing top-level names to ../../build/nmpc_node/nmpc_node.egg-info/top_level.txt
+[2.843s] writing manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+[2.847s] reading manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+[2.848s] writing manifest file '../../build/nmpc_node/nmpc_node.egg-info/SOURCES.txt'
+[2.848s] running build
+[2.849s] running build_py
+[2.849s] creating /home/diego234/Esame/build/nmpc_node/build
+[2.849s] creating /home/diego234/Esame/build/nmpc_node/build/lib
+[2.849s] creating /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+[2.849s] copying nmpc_node/nmpc_anto.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+[2.849s] copying nmpc_node/nmpc_diego.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+[2.849s] copying nmpc_node/__init__.py -> /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node
+[2.849s] running install
+[2.849s] running install_lib
+[2.851s] creating /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+[2.851s] copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/nmpc_anto.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+[2.851s] copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/nmpc_diego.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+[2.851s] copying /home/diego234/Esame/build/nmpc_node/build/lib/nmpc_node/__init__.py -> /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node
+[2.852s] byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/nmpc_anto.py to nmpc_anto.cpython-310.pyc
+[2.854s] byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/nmpc_diego.py to nmpc_diego.cpython-310.pyc
+[2.855s] byte-compiling /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node/__init__.py to __init__.cpython-310.pyc
+[2.855s] running install_data
+[2.856s] creating /home/diego234/Esame/install/nmpc_node/share/ament_index
+[2.856s] creating /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index
+[2.856s] creating /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index/packages
+[2.856s] copying resource/nmpc_node -> /home/diego234/Esame/install/nmpc_node/share/ament_index/resource_index/packages
+[2.856s] copying package.xml -> /home/diego234/Esame/install/nmpc_node/share/nmpc_node
+[2.856s] running install_egg_info
+[2.859s] Copying ../../build/nmpc_node/nmpc_node.egg-info to /home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages/nmpc_node-0.0.0-py3.10.egg-info
+[2.859s] running install_scripts
+[2.885s] Installing nmpc_node script to /home/diego234/Esame/install/nmpc_node/lib/nmpc_node
+[2.885s] writing list of installed files to '/home/diego234/Esame/build/nmpc_node/install.log'
+[2.932s] Invoked command in '/home/diego234/Esame/src/nmpc_node' returned '0': PYTHONPATH=/home/diego234/Esame/build/nmpc_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/diego234/Esame/install/nmpc_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmpc_node build --build-base /home/diego234/Esame/build/nmpc_node/build install --record /home/diego234/Esame/build/nmpc_node/install.log --single-version-externally-managed install_data

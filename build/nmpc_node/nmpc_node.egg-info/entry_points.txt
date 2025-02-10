@@ -1,0 +1,3 @@
+[console_scripts]
+nmpc_node = nmpc_node.nmpc_diego:main
+

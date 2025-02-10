@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'nmpc_node = nmpc_node.nmpc_anto:main',
+            'nmpc_node = nmpc_node.nmpc_diego:main',
         ],
     },
 )
